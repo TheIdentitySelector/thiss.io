@@ -1,5 +1,6 @@
 ---
 layout: home
+title: The Identity Selector Software
 ---
 
 The Identity Selector Software (thiss.io) is an implementation of an identity selector (aka discovery

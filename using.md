@@ -1,5 +1,5 @@
 ---
-title: The use.thiss.io demo service
+title: Demo Service
 permalink: /use/
 layout: page
 ---
