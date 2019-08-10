@@ -15,7 +15,7 @@ The Coalition for Seamless Access provides the thiss service to enable several d
 
 * **Limited** - lets you use the Seamless Access discovery service for users to find and sign into their preferred Identity Provider, but doesn’t integrate this service into your site.
   - This involves an implementation of [the SAML identity provider discovery protocol](http://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-idp-discovery.pdf)
-* **Full** - lets you use the Seamless Access service to display the button on your site, and use the Seamless Access discovery and persistence services as integrated components on your site.
+* **Standard** - lets you use the Seamless Access service to display the button on your site, and use the Seamless Access discovery and persistence services as integrated components on your site.
    - This involves the use of a browser-based login button component you can display on your site that is integrated with the Seamless Access service.
 * **Advanced** - provides you with the Seamless Access persistence service while giving you greater control over the appearance of the service on your site, and what Identity Providers (IdPs) you include in your discovery service.
   - This includes the use of a jQuery plugin for implementing your own discovery service on top of the thiss-js infrastructure. This option should only be attempted if your SP requires a custom search interface or relies on a non-standard SAML metadata feed, but you still want the user's browser to be able to remember their login choice across several SPs (persistence.)
@@ -62,23 +62,23 @@ For more details visit the [SSP documentation](https://simplesamlphp.org/docs/st
 
 ---
 
-# Implementing a "Full" Integration
+# Implementing a "Standard" Integration
 
-![Illustration of the full integration](/assets/img/SA-full.png)
+![Illustration of the Standard integration](/assets/img/SA-full.png)
 
-For the "Full" flavor, you will implement:
+For the "Standard" flavor, you will implement:
 
 * Discovery Service Integration - _See the section above for instructions._
 * Display of Seamless Access Login Button - _Use the Seamless Access service to display the login button component on your SP login page._
 * Integration of Login Button with your SAML SP - _Integrate the Seamless Access service to use it as your Discovery Service._
 
-With the "Full" Integration, you will be using the active login button which uses browser local store to remember and present the last Identity Provider selection made by the user. For most use-cases this completely eliminates the search/find/select UX for most interactions with your SP since most users rely on the same IdP for all their logins to a site. 
+With the "Standard" Integration, you will be using the active login button which uses browser local store to remember and present the last Identity Provider selection made by the user. For most use-cases this completely eliminates the search/find/select UX for most interactions with your SP since most users rely on the same IdP for all their logins to a site. 
 
 ## Display of Seamless Access Login Button
 
 ### Including the component library
 
-You will need to reference the Seamless Access component library before you can use it. For the Full implementation, you will always reference through a CDN:
+You will need to reference the Seamless Access component library before you can use it. For the Standard implementation, you will always reference through a CDN:
 
 ``` html
 <head>

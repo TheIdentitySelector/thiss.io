@@ -7,12 +7,12 @@ title: Getting Started
 The Coalition for Seamless Access provides the thiss service to enable several different “flavors” of implementation:
 
 * **Limited** - lets you use the Seamless Access discovery service for users to find and sign into their preferred Identity Provider, but doesn’t integrate this service into your site.
-* **Full** - lets you use the Seamless Access service to display the button on your site, and use the Seamless Access discovery and persistence services as integrated components on your site.
+* **Standard** - lets you use the Seamless Access service to display the button on your site, and use the Seamless Access discovery and persistence services as integrated components on your site.
 * **Advanced** - provides you with the Seamless Access persistence service while giving you greater control over the appearance of the service on your site, and what Identity Providers (IdPs) you include in your discovery service.
 
 # Using the Seamless Access Service or thiss Software
 
-To implement the Seamless Access **Limited** or **Full** 'flavors', you will be using the Seamless Access service which is a hosted instance of the thiss software. This service provides the core benefits of Seamless Access with minimal work. Most Service Providers (SPs) will prefer this option.
+To implement the Seamless Access **Limited** or **Standard** 'flavors', you will be using the Seamless Access service which is a hosted instance of the thiss software. This service provides the core benefits of Seamless Access with minimal work. Most Service Providers (SPs) will prefer this option.
 
 To implement the **Advanced** features, you will need to use the thiss software to run your own instance of the service.
 
@@ -24,9 +24,9 @@ For the the "Limited" flavor, you will implement:
 
 See the [Integration Guide](/integration/) to learn how to configure your Service Provider (SP) software stack.
 
-# Getting Started - "Full" Flavor
+# Getting Started - "Standard" Flavor
 
-For the "Full" flavor, you will implement:
+For the "Standard" flavor, you will implement:
 
 * Discovery Service Integration - _Integrate the Seamless Access service to use it as your Discovery Service._
 * Display of Seamless Access Login Button - _Use the Seamless Access service to display the login button component on your SP login page._
@@ -45,7 +45,9 @@ The [pyFF.io](https://pyff.io) implementation of MDQ is known to work with thiss
 
 Running an instance of thiss-js can be done by launching a docker container. A simple setup assuming a pyFF backend is described in the README of [thiss-js](https://github.com/TheIdentitySelector/thiss-ds-js).
 
+While some details for implementation of the "Advanced" flavor can be found in the[Integration Guide](/integration/), more detailed documentation can be found in the [Discovery Service Client API Repository README](https://github.com/TheIdentitySelector/thiss-ds-js/blob/master/README.md).
+
 # An Example Implementation
 
-You can see an example of the "Full" implementation at our [Demo Service](/use/). This site provides an example of the standard behavior, and can provide insight for your implementation.
+You can see an example of the "Standard" implementation at our [Demo Service](/use/). This site provides an example of the standard behavior, and can provide insight for your implementation.
 
