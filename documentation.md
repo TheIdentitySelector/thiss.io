@@ -13,4 +13,4 @@ Important documentation include the following:
 * [thiss-ds-js](https://thiss-ds-js.readthedocs.org): A set of clients for the discovery service. Can be used to implement a DS connected to a central persistence service.
 * [this-mdq](https://thiss-mdq.readthedocs.org): An implementation of the metadata query protocol (MDQ) for JSON metadata only. 
 
-In addition there is a repository containing some simple examples illustrating how the various parts of the software suite fits together and can be used: [thiss-exampoes](https://github.com/TheIdentitySelector/thiss-examples).
+In addition there is a repository containing some simple examples illustrating how the various parts of the software suite fits together and can be used: [thiss-examples](https://github.com/TheIdentitySelector/thiss-examples).
