@@ -3,6 +3,8 @@ layout: home
 title: Documentation
 ---
 
+For an introduction to the thiss software take a look at the [getting started](/gettingstarted/) guide and the [integration guide](/integration/) which provides introduction to the concepts.
+
 Detailed documentation (incl API docs) for all software packages is maintained in each respective software repository and hosted at readthedocs.org
 
 Important documentation include the following:
