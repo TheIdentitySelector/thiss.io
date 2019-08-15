@@ -1,6 +1,5 @@
 ---
 layout: home
-title: The Identity Selector Software
 ---
 
 ![Coalition for Seamless Access Logo](/assets/img/RA21-New-Blue.png)
