@@ -15,5 +15,5 @@ Important repositories include the following:
 
 * [thiss-js](https://github.com/TheIdentitySelector/thiss-js): The discovery service including a Dockerfile for easy deploy.
 * [thiss-ds-js](https://github.com/TheIdentitySelector/thiss-ds-js): A set of clients for the discovery service. Can be used to implement a DS connected to a central persistence service.
-* [thiss-jquery-plugins](https://github.com/TheIdentitySelector/thiss-jquery-plugins): A jQuery plugin for building search-based identity selectors.
+* [thiss-jquery-plugin](https://github.com/TheIdentitySelector/thiss-jquery-plugin): A jQuery plugin for building search-based identity selectors.
 * [this-mdq](https://github.com/TheIdentitySelector/thiss-mdq): An implementation of the metadata query protocol (MDQ) for JSON metadata only. 
