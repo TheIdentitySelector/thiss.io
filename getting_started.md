@@ -49,5 +49,5 @@ While some details for implementation of the "Advanced" flavor can be found in t
 
 # An Example Implementation
 
-You can see an example of the "Standard" implementation at our [Demo Service](/use/). This site provides an example of the standard behavior, and can provide insight for your implementation.
+You can see an example of the "Standard" implementation at our [Demo Service](https://service.seamlessaccess.org/). This site provides an example of the standard behavior, and can provide insight for your implementation.
 
