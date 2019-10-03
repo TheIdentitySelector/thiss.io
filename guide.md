@@ -4,7 +4,7 @@ permalink: /integration/
 layout: page
 ---
 
-The [thiss-js](https://github.com/TheIdentitySelector/thiss-js) software is a complete discovery solution compatible with any MDQ service that implements the search extensions for instance [pyff.io](https://pyff.io) or [thiss-mdq](https://github.com/TheIdentitySelector/thiss-mdq). Regardless of weather you deploy your own instance of thiss-js or if you connect to an existing service - e.g., the [service.seamlessaccess.org Demo Service](/use/), you need to integrate the instance into your SP. The examples below all assume a SAML SP but it is likely relatively easy to provide a similar solution for OpenIDC or other identity protocols that rely on redirects. 
+The [thiss-js](https://github.com/TheIdentitySelector/thiss-js) software is a complete discovery solution compatible with any MDQ service that implements the search extensions for instance [pyff.io](https://pyff.io) or [thiss-mdq](https://github.com/TheIdentitySelector/thiss-mdq). Regardless of whether you deploy your own instance of thiss-js or if you connect to an existing service - e.g., the [service.seamlessaccess.org Demo Service](/use/), you need to integrate the instance into your SP. The examples below all assume a SAML SP but it is likely relatively easy to provide a similar solution for OpenIDC or other identity protocols that rely on redirects. 
 
 _**NOTE:** In the examples below we'll assume you are integrating with service.seamlessaccess.org - if you are deploying your own instance of thiss-js, substitute this domain for your own in the various configuration examples below._
 
@@ -25,13 +25,13 @@ The Coalition for Seamless Access provides the thiss service to enable several d
 
 ![Illustration of the limited integration](/assets/img/SA-limited.png)
 
-For the the "Limited" flavor, you will implement:
+For the "Limited" flavor, you will implement:
 
 * Discovery Service Integration - _Integrate the Seamless Access service to use it as your Discovery Service._
 
 ## Discovery Service Integration
 
-By far the easiest integration is to use Seamless Access service as a standard SAML identity provider discovery service (DS). The DS url is https://service.seamlessaccess.org/ds - you will use this url in your SPs configuration where appropriate. Here is how to do this for some common SP software stacks:
+By far the easiest integration is to use Seamless Access service as a standard SAML identity provider discovery service (DS). The DS URL is https://service.seamlessaccess.org/ds - you will use this URL in your SPs configuration where appropriate. Here is how to do this for some common SP software stacks:
 
 ### Shibboleth
 
@@ -45,7 +45,7 @@ In the file /etc/shibboleth/shibboleth.xml modify the SSO element to read:
 
 For a complete set of options related to discovery see the [shibboleth documentation](https://wiki.shibboleth.net/confluence/display/SP3/Home).
 
-### SimpleSAMLPhp
+### SimpleSAMLphp
 
 In authsources.php (relative to the SSP config directory) find your SAML authentication source (often named 'default-sp') and set the discoURL parameter to https://service.seamlessaccess.org/ds/:
 
@@ -72,7 +72,7 @@ For the "Standard" flavor, you will implement:
 * Display of Seamless Access Login Button - _Use the Seamless Access service to display the login button component on your SP login page._
 * Integration of Login Button with your SAML SP - _Integrate the Seamless Access service to use it as your Discovery Service._
 
-With the "Standard" Integration, you will be using the active login button which uses browser local store to remember and present the last Identity Provider selection made by the user. For most use-cases this completely eliminates the search/find/select UX for most interactions with your SP since most users rely on the same IdP for all their logins to a site. 
+With the "Standard" Integration, you will be using the active login button which uses the browser local store to remember and present the last Identity Provider selection made by the user. For most use-cases this completely eliminates the search/find/select UX for most interactions with your SP since most users rely on the same IdP for all their logins to a site. 
 
 ## Display of Seamless Access Login Button
 
@@ -114,13 +114,13 @@ window.onload = function() {
 The `render` function in this code, takes two parameters:
 
 1. The `loginInitiatorURL:` - See the next section, "Integration of Login Button with your SAML SP", for more details
-2. The location where to render the button - here you will use the id tag that you used for your html `<div>` container, formatted using css selector styling in quotes.
+2. The location where to render the button - here you will use the id tag that you used for your html `<div>` container, formatted using CSS selector styling in quotes.
 
 ## Integrating the Login Button with your SAML SP
 
 The first step is easy to describe in general but the second step depends on exactly how your SAML implementation works. We provide examples below for the Shibboleth SP but if you run something other than Shibboleth you need to consult your documentation to figure out how the integration works.
 
-The example above works out of the box for Shibboleth assuming you have configured https://service.seamlessaccess.org/ds as the discovery service as in the example above. The Shibboleth simplified SP configuration uses the url */Shibboleth.sso/Login* to trigger an authentication request using the discovery service configured in the *&lt;SSO&gt;* element.
+The example above works out of the box for Shibboleth assuming you have configured https://service.seamlessaccess.org/ds as the discovery service as in the example above. The Shibboleth simplified SP configuration uses the URL */Shibboleth.sso/Login* to trigger an authentication request using the discovery service configured in the *&lt;SSO&gt;* element.
 
 In general the idea is to provide two hooks for the button component: 
 
