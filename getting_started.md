@@ -18,7 +18,7 @@ To implement the **Advanced** features, you will need to use the thiss software 
 
 # Getting Started - "Limited" Flavor
 
-For the the "Limited" flavor, you will implement:
+For the "Limited" flavor, you will implement:
 
 * Discovery Service Integration - _Integrate the Seamless Access service to use it as your Discovery Service._
 
@@ -45,7 +45,7 @@ The [pyFF.io](https://pyff.io) implementation of MDQ is known to work with thiss
 
 Running an instance of thiss-js can be done by launching a docker container. A simple setup assuming a pyFF backend is described in the README of [thiss-js](https://github.com/TheIdentitySelector/thiss-ds-js).
 
-While some details for implementation of the "Advanced" flavor can be found in the[Integration Guide](/integration/), more detailed documentation can be found in the [Discovery Service Client API Repository README](https://github.com/TheIdentitySelector/thiss-ds-js/blob/master/README.md).
+While some details for implementation of the "Advanced" flavor can be found in the [Integration Guide](/integration/), more detailed documentation can be found in the [Discovery Service Client API Repository README](https://github.com/TheIdentitySelector/thiss-ds-js/blob/master/README.md).
 
 # An Example Implementation
 
