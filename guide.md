@@ -116,6 +116,16 @@ The `render` function in this code, takes two parameters:
 1. The `loginInitiatorURL:` - See the next section, "Integration of Login Button with your SAML SP", for more details
 2. The location where to render the button - here you will use the id tag that you used for your html `<div>` container, formatted using CSS selector styling in quotes.
 
+### Content-Security-Policy considerations
+
+If your website publishes a [Content-Security-Policy](https://en.wikipedia.org/wiki/Content_Security_Policy) you will need to make provision for the components served from the service.seamlessaccess.org CDN (or from your domain if you deploy your own version of thiss) by merging the following into your existing CSP:
+
+```
+Content-Security-Policy: script-src 'unsafe-inline' service.seamlessaccess.org; frame-src service.seamlessaccess.org;
+```
+
+The `'unsafe-inline'` is required for the above `DiscoveryComponent.render` example, but could be removed if the onload function was included e.g. from a file.
+
 ## Integrating the Login Button with your SAML SP
 
 The first step is easy to describe in general but the second step depends on exactly how your SAML implementation works. We provide examples below for the Shibboleth SP but if you run something other than Shibboleth you need to consult your documentation to figure out how the integration works.
