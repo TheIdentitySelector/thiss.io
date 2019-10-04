@@ -118,13 +118,13 @@ The `render` function in this code, takes two parameters:
 
 ### Content-Security-Policy considerations
 
-If your website publishes a [Content-Security-Policy](https://en.wikipedia.org/wiki/Content_Security_Policy) you will need to make provision for the components served from the CDN by merging the following into your existing CSP:
+If your website publishes a [Content-Security-Policy](https://en.wikipedia.org/wiki/Content_Security_Policy) you will need to make provision for the components served from the service.seamlessaccess.org CDN (or from your domain if you deploy your own version of thiss) by merging the following into your existing CSP:
 
 ```
 Content-Security-Policy: script-src 'unsafe-inline' service.seamlessaccess.org; frame-src service.seamlessaccess.org;
 ```
 
-The `'unsafe-inline'` is required for the above `DiscoveryComponent.render` example, but could be removed if the onload function was included from a file.
+The `'unsafe-inline'` is required for the above `DiscoveryComponent.render` example, but could be removed if the onload function was included e.g. from a file.
 
 ## Integrating the Login Button with your SAML SP
 
